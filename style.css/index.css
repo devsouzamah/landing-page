@@ -13,7 +13,8 @@ h1{
     color: white;
     font-size: 15px;
     text-align:center;
-    padding-top: 13px;  
+    padding-top: 12px;  
+    
 }
 
 h2{
@@ -23,7 +24,6 @@ h2{
     font-size:50px;
     color: white;  
 }
-
 
 #cabecalho{
     position: fixed;
@@ -40,7 +40,7 @@ h2{
 }
 
 #capa img{
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 }
 
@@ -101,7 +101,6 @@ h2{
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 13px;   
-
 }
 
 #card2{
@@ -125,12 +124,6 @@ h2{
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 13px;
-    
-}
-
-img :hover{
-    box-shadow: 0 0 5px rgb(241, 91, 141);
-    
    
 }
 
@@ -175,4 +168,312 @@ img :hover{
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 15px;
+}
+
+@media (min-width: 480px) {
+    h1{
+        position: fixed;
+        width: 100%;
+        height:40px; 
+        background-color:rgb(241, 91, 141);
+        color: white;
+        font-size: 12px;
+        text-align:center;
+        padding-top: 12px;     
+    }
+
+    #menu-h ul li a{
+        display: flex;
+        list-style: none;   
+        background-color: white;
+        color: rgb(90, 88, 88);
+        padding: 5px;
+        font-size: 12px; 
+        margin-left: 5px;
+        text-align: center;
+    }
+
+  
+    h2{
+        position:absolute;
+        top: 230px;
+        left: 60px;
+        font-size:20px;
+        color: white;  
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        display:block;
+        grid-template-areas: "capa capa capa"
+                             "card1 card2 card3"
+                             "mapa video promocoes"
+                             "rodape rodape rodape";
+ 
+}
+
+   #capa img{
+      grid-area: capa;
+      display: flex;
+      width: 100%;
+      height: 400px;
+    
+}
+    #card1{
+        grid-area: card1;
+        padding-right: 30px;
+    }
+
+    #card2{
+        grid-area: card2;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 5px;
+    }
+
+    #card3{
+        grid-area: card3;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 5px;
+    }
+
+    #mapa{
+        padding-top: 30px;
+        margin-right: 80px;
+
+    }
+
+    #video{
+        grid-area: video;
+        padding-left: 10px;
+        padding-top:  10px;
+       
+    }
+
+     #promocoes{
+        grid-area: promocoes;
+        text-align: center;
+        padding-bottom: 110px;
+
+
+     }
+
+     
+}
+
+@media (min-width: 768px) {
+    h1{
+        position: fixed;
+        width: 100%;
+        height:40px; 
+        background-color:rgb(241, 91, 141);
+        color: white;
+        font-size: 15px;  
+        text-align:center;
+        padding-top: 12px;     
+    }
+
+    #menu-h ul li a{
+        display: flex;
+        list-style: none;   
+        background-color: white;
+        color: rgb(90, 88, 88);
+        padding: 5px;
+        font-size: 15px; 
+        margin-left: 30px;
+        font-size: large;
+        text-align: center;
+    }
+
+     #capa img{
+        display: flex;
+        width: 100%;
+        height: 400px;
+        
+    }
+
+    h2{
+        position: relative;
+        top: 250px;
+        padding-right: 100px;
+        text-align:center;
+        font-size:30px;
+        color: white;  
+    }
+    
+
+}
+
+@media (min-width: 1280px) {
+   
+    h1{
+        position: fixed;
+        width: 100%;
+        height:40px; 
+        background-color:rgb(241, 91, 141);
+        color: white;
+        font-size: 15px;
+        text-align:center;
+        padding-top: 12px;  
+        
+    }
+    
+    h2{
+        position: relative;
+        top: 300px;
+        text-align: center;
+        font-size:50px;
+        color: white;  
+    }
+    
+    
+    #cabecalho{
+        position: fixed;
+        top: 40px;
+        background-color: blanchedalmond;
+        width: 100%;
+        padding: 20px; 
+        text-align: center;     
+    }
+    
+    #cabecalho img{
+        width: 70px;
+        height: 70px;
+    }
+    
+    #capa img{
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "capa capa capa"
+                             "card1 card2 card3"
+                             "mapa video promocoes"
+                             "rodape rodape rodape";
+    }
+    
+    
+    #menu-h{
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        top: 24%;
+        
+    }
+    
+    #menu-h ul{
+        display: flex;
+        list-style: none;   
+    }
+    
+    #menu-h ul li{
+        padding: 15px;       
+    }
+    
+    #menu-h ul li a{
+        color: rgb(90, 88, 88);
+        padding: 10px;
+        font-size: 30px;
+        font-size:large;
+        margin-left: 100px;
+       
+    }
+    
+    #menu-h a:hover{
+        background-color:  rgb(241, 91, 141);
+        transition: all 0.3s linear;
+    }
+    
+    #capa{
+        grid-area: capa;
+        
+    }
+    
+    #card1{
+        grid-area: card1;
+        padding-left: 30px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 13px;   
+    }
+    
+    #card2{
+        grid-area: card2;
+        padding-left: 10px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 13px;
+    
+    }
+    
+    #card3{
+        grid-area: card3;
+        padding-right:  40px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 13px;
+       
+    }
+    
+    #mapa iframe{
+        grid-area: mapa;
+        width: 300px;
+        height: 300px;
+    }
+    
+    #mapa{
+        padding-top: 30px;
+        margin-left: 80px;
+        padding-bottom: 30px;
+        text-align: center; 
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+    }
+    
+    #video{
+        grid-area: video;
+        padding-left: 30px;
+        padding-top:  30px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+    }
+    
+    #promocoes{
+        grid-area: promocoes;
+        font-size: 25px;
+        margin-top: 130px;
+        margin-left: 15px;
+        color: rgb(241, 91, 141);
+    }
+    
+    #rodape{
+        grid-area: rodape;
+        background-color: blanchedalmond;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+    }
+    
+
 }
