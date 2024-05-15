@@ -191,7 +191,7 @@ h2{
     #cabecalho{
         padding: 10px 0 10px 0;
     }
-
+/*
     #menu-h{
         display: none;
     }
@@ -200,7 +200,7 @@ h2{
         display: none;
     }
 
-  
+  */
     h2{
         position:absolute;
         top: 230px;
