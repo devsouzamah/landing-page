@@ -15,6 +15,7 @@ h1{
     font-size: 15px;
     text-align:center;
     padding-top: 12px;  
+    font-weight: normal;
     
 }
 
@@ -98,6 +99,7 @@ h3{
     background-color:  rgb(241, 91, 141);
     font-size: 25px;
     color: white;
+    font-weight: normal;
    
    
 }
