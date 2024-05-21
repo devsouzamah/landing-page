@@ -100,8 +100,9 @@ h2{
 #curiosidades{
     width: 100%;
     display: flex;
+   
     margin-left: 410px;
-    padding-top: 130px;
+    padding-top: 250px;
     justify-content: center;
     text-align: center;
     
@@ -116,11 +117,13 @@ h2{
 }
 
 #rodape{
+   
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction:column;
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 15px;
     padding-top: 300px;
+    background-color: blanchedalmond;
+   
 }
