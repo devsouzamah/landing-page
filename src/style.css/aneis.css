@@ -15,6 +15,7 @@ h1{
     font-size: 15px;
     text-align:center;
     padding-top: 12px;  
+    font-weight: normal;
     
 }
 
@@ -47,7 +48,7 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "capa capa capa"
-                         "foto1 foto2 foto3"
+                         "fotos fotos fotos"
                          "rodape rodape rodape";
                          
 }
@@ -92,27 +93,25 @@ h2{
 }
 
 h3{
+    width: 100%;
+    position: fixed;
     text-align: center;
     background-color:  rgb(241, 91, 141);
     font-size: 25px;
     color: white;
+    font-weight: normal;
    
    
 }
 
-#foto1{
-    grid-area: foto1;
-    padding-left: 30px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: rgb(90, 88, 88);
-    font-size: 13px; 
+.fotos{
+    grid-area: fotos;
+    margin: auto;
     
-    
+       
 }
 
-#foto2{
+/*#foto2{
     grid-area: foto2;
     padding-left: 10px;
     padding-top: 40px;
@@ -132,7 +131,8 @@ h3{
     color: rgb(90, 88, 88);
     font-size: 13px;
    
-}
+}*/
+
 
 #rodape{
     grid-area: rodape;

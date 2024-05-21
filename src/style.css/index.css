@@ -7,8 +7,8 @@
 
 h1{
     position: fixed;
-    width: 100%;
-    height:40px; 
+    width: 100vw;
+    height:40vh; 
     background-color:rgb(241, 91, 141);
     color: white;
     font-size: 15px;
@@ -29,7 +29,7 @@ h2{
     position: fixed;
     top: 40px;
     background-color: blanchedalmond;
-    width: 100%;
+    width: 100vw;
     padding: 20px; 
     text-align: center;     
 }
@@ -40,8 +40,13 @@ h2{
 }
 
 #capa img{
+<<<<<<< HEAD
     max-width: 100%;
     height: 90%;
+=======
+    max-width: 50%;
+    height: 50%;
+>>>>>>> 4978ed908e2bff4b070998358f7bc7ab103ca6fd
 }
 
 .container{
@@ -60,7 +65,7 @@ h2{
 #menu-h{
     position: fixed;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     top: 24%;
     
 }
@@ -78,8 +83,7 @@ h2{
     color: rgb(90, 88, 88);
     padding: 20px;
     font-size: 20px;
-    font-size:large;
-    margin-left: 30px;
+    
    
 }
 
@@ -166,7 +170,7 @@ h2{
     display: flex;
     flex-direction: column;
     text-align: center;
-    text-align: center;
+  
     color: rgb(90, 88, 88);
     font-size: 15px;
     padding-top: 300px;
@@ -189,18 +193,19 @@ h2{
         padding-top: 12px;     
     }
 
-    #menu-h ul li a{
-        display: flex;
-        list-style: none;   
-        background-color: white;
-        color: rgb(90, 88, 88);
-        padding: 5px;
-        font-size: 12px; 
-        margin-left: 5px;
-        text-align: center;
+    #cabecalho{
+        padding: 10px 0 10px 0;
+    }
+/*
+    #menu-h{
+        display: none;
     }
 
-  
+    #menu-h ul li a{
+        display: none;
+    }
+
+  */
     h2{
         position:absolute;
         top: 230px;
@@ -223,8 +228,9 @@ h2{
    #capa img{
       grid-area: capa;
       display: flex;
-      width: 100%;
-      height: 400px;
+      max-width: 100%;
+      height:100%;
+      
     
 }
     #card1{
@@ -262,10 +268,24 @@ h2{
      #promocoes{
         grid-area: promocoes;
         text-align: center;
-        padding-bottom: 110px;
+        padding-bottom: 100px;
 
 
      }
+
+     #rodape{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+       
+        
+    }
 
      
 }
