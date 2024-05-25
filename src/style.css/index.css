@@ -1,14 +1,13 @@
 *{
     margin: 0;  
     padding: 0;
-    text-decoration: none;
-    font-family:'Times New Roman', Times, serif;  
+    font-family:'Times New Roman', Times, serif; 
+    box-sizing: border-box; 
+   
 }
 
 h1{
     position: fixed;
-    width: 100vw;
-    height:40vh; 
     background-color:rgb(241, 91, 141);
     color: white;
     font-size: 15px;
@@ -29,7 +28,6 @@ h2{
     position: fixed;
     top: 40px;
     background-color: blanchedalmond;
-    width: 100vw;
     padding: 20px; 
     text-align: center;     
 }
@@ -40,13 +38,9 @@ h2{
 }
 
 #capa img{
-<<<<<<< HEAD
-    max-width: 100%;
-    height: 90%;
-=======
-    max-width: 50%;
-    height: 50%;
->>>>>>> 4978ed908e2bff4b070998358f7bc7ab103ca6fd
+    width: 100%
+    
+
 }
 
 .container{
@@ -56,40 +50,54 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "capa capa capa"
-                         "card1 card2 card3"
+                         "fotos fotos fotos"
                          "mapa video promocoes"
                          "rodape rodape rodape";
                          
 }
 
-#menu-h{
-    position: fixed;
-    background-color: white;
-    width: 100vw;
-    top: 24%;
-    
-}
-
-#menu-h ul{
+.menu-h{
     display: flex;
-    list-style: none;   
+    justify-content: space-between;
+    background-color: white;
+    padding: auto;
+    margin: 0 auto;
+      
 }
 
-#menu-h ul li{
-    padding: 15px;       
+.menu-h li{
+   display:inline-block;
+ 
+         
 }
 
-#menu-h ul li a{
+.menu-h li a{
+    display:inline-block;
+    text-decoration: none;
     color: rgb(90, 88, 88);
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px;
+    font-weight:500;
     
    
 }
 
-#menu-h a:hover{
+.menu-h li a:hover{
     background-color:  rgb(241, 91, 141);
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
+    display: none;
+}
+
+.dropdown-menu a{
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
 }
 
 #capa{
@@ -167,10 +175,10 @@ h2{
 }
 
 #rodape{
+    grid-area: rodape;
     display: flex;
     flex-direction: column;
     text-align: center;
-  
     color: rgb(90, 88, 88);
     font-size: 15px;
     padding-top: 300px;

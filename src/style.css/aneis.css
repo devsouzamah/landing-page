@@ -19,7 +19,7 @@ h1{
     
 }
 
-h2{
+h3{
     position: relative;
     top: 300px;
     text-align: center;
@@ -47,49 +47,57 @@ h2{
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "capa capa capa"
+    grid-template-areas: "titulo titulo titulo"
                          "fotos fotos fotos"
                          "rodape rodape rodape";
                          
 }
 
 
-#menu-h{
-    position: fixed;
+.menu-h{
+    display: flex;
+    justify-content: space-between;
     background-color: white;
-    width: 100%;
-    top: 24%;
-    padding-bottom: 15px;  
+    padding: auto;
+    margin: 0 auto;
     
 }
 
-#menu-h ul{
-    display: flex;
-    list-style: none;   
+.menu-h li{
+    display:inline-block;   
 }
 
-#menu-h ul li{
-    padding: 15px;  
+.menu-h li a{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(90, 88, 88);
+    padding: 15px;
+    font-weight:500;
       
 }
 
-#menu-h ul li a{
-    color: rgb(90, 88, 88);
-    padding: 25px;
-    font-size: 20px;
-    font-size:large;
-    margin-left: 50px;
-   
-}
-
-#menu-h a:hover{
+.menu-h li a:hover{
     background-color:  rgb(241, 91, 141);
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
+}
+   
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
+    display: none;
 }
 
-#capa{
-    grid-area: capa;
-    padding-top:210px;
+.dropdown-menu a{
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+#titulo{
+    grid-area: titulo;
+    padding-top: 350px;
 }
 
 h3{
@@ -99,16 +107,21 @@ h3{
     background-color:  rgb(241, 91, 141);
     font-size: 25px;
     color: white;
-    font-weight: normal;
-   
-   
+    font-weight: normal; 
 }
 
 .fotos{
     grid-area: fotos;
-    margin: auto;
-    
+  
        
+}
+
+.fotos img{
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    
+    
 }
 
 /*#foto2{

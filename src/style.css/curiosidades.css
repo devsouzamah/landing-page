@@ -19,14 +19,6 @@ h1{
     
 }
 
-h2{
-    position: relative;
-    top: 300px;
-    text-align: center;
-    font-size:50px;
-    color: white;  
-}
-
 #cabecalho{
     position: fixed;
     top: 40px;
@@ -47,8 +39,8 @@ h2{
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "capa capa capa"
-                         "curiosidadades curiosidades curiosidades"
+    grid-template-areas: "titulo titulo titulo"
+                         "curiosidades curiosidades curiosidades"
                          "prata925 prata925 prata925"
                          "rodape rodape rodape";
   
@@ -90,21 +82,29 @@ h2{
    
 }
 
-h2{
+#titulo{
+    grid-area: titulo;
+    padding-top:200px;
+}
+
+h3{
+    width: 100%;
+    position: fixed;
     text-align: center;
     background-color:  rgb(241, 91, 141);
     font-size: 25px;
     color: white;
-    }
+    font-weight: normal; 
+}
 
 #curiosidades{
-    width: 100%;
+    grid-area: curiosidades;
     display: flex;
-   
-    margin-left: 410px;
-    padding-top: 250px;
     justify-content: center;
+  
     text-align: center;
+    padding-top: 5px;
+   
     
   
 }
@@ -117,13 +117,13 @@ h2{
 }
 
 #rodape{
-   
+    grid-area: rodape;
     display: flex;
     flex-direction:column;
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 15px;
-    padding-top: 300px;
+    padding-top: 90px;
     background-color: blanchedalmond;
    
 }
