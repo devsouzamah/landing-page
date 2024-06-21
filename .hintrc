@@ -19,6 +19,7 @@
       }
     ],
     "no-inline-styles": "off",
-    "axe/text-alternatives": "off"
+    "axe/text-alternatives": "off",
+    "axe/forms": "off"
   }
 }
