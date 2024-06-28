@@ -2,6 +2,7 @@
     margin: 0;  
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
     font-family:'Times New Roman', Times, serif; 
      
 }
@@ -15,16 +16,8 @@ h1{
     font-size: 15px;
     text-align:center;
     padding-top: 12px;  
-    font-weight: normal;
+    font-weight: bolder;
     
-}
-
-h3{
-    position: relative;
-    top: 300px;
-    text-align: center;
-    font-size:50px;
-    color: white;  
 }
 
 #cabecalho{
@@ -41,46 +34,37 @@ h3{
     height: 70px;
 }
 
-.container{
-    display: grid;
-    height: 100vh;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "titulo titulo titulo"
-                         "fotos fotos fotos"
-                         "rodape rodape rodape";
-                         
-}
 
-
-.menu-h{
-    display: flex;
-    justify-content: space-between;
+#menu-h{
+    position: fixed;
     background-color: white;
-    padding: auto;
-    margin: 0 auto;
+    width: 100%;
+    top: 24%;
     
 }
 
-.menu-h li{
-    display:inline-block;   
+#menu-h ul{
+    display: flex;
+    list-style: none;   
 }
 
-.menu-h li a{
-    display:inline-block;
-    text-decoration: none;
+#menu-h ul li{
+    padding: 15px;       
+}
+
+#menu-h ul li a{
+    font-size: 18px;
     color: rgb(90, 88, 88);
-    padding: 15px;
-    font-weight:500;
-      
+    padding: 20px;
+    margin-left: 80px;
+   
 }
 
-.menu-h li a:hover{
+#menu-h a:hover{
     background-color:  rgb(241, 91, 141);
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
 }
-   
+
 .dropdown-menu{
     position: absolute;
     box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
@@ -95,64 +79,266 @@ h3{
     display: block;
 }
 
-#titulo{
-    grid-area: titulo;
-    padding-top: 350px;
-}
-
-h3{
+.container-grid {
+    display: grid;
+    height: 100vh;
     width: 100%;
-    position: fixed;
-    text-align: center;
-    background-color:  rgb(241, 91, 141);
-    font-size: 25px;
-    color: white;
-    font-weight: normal; 
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-areas: 
+                         "anel1 anel2 anel3"
+                         "rodape rodape rodape";
+
+    margin-top: 75px;
+    justify-content: center; /* Alinha a grade inteira horizontalmente ao centro */
+    align-content: center;   /* Alinha a grade inteira verticalmente ao centro */
+
+
 }
 
-.fotos{
-    grid-area: fotos;
-  
+#imagem1{
+    grid-area: anel1;
+    padding-top: 250px;
+    padding-left: 40px;  
+    
+}
+
+#imagem2{
+    grid-area: anel2;
+    padding-top: 250px;
+    padding-left: 50px;
+}
+
+#imagem3{
+    grid-area: anel3;
+    padding-top: 250px;
+    padding-left: 50px;
+}
+
+#rodape{
+        grid-area: rodape;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+        background-color: blanchedalmond;
+        margin-top: 60px;
+        padding: 35px;
        
 }
 
-.fotos img{
-    width: 350px;
-    height: 350px;
-    padding: 10px;
+@media (min-width: 768px) {
+
+    h1{
+    width: 100%;
     
+    }
+
+    #cabecalho{
+        position: fixed;
+        top: 40px;
+        width: 100%;
+        padding: 15px; 
+    }
+    
+    #cabecalho img{
+        width: 70px;
+        height: 70px;
+    }
+
+    #menu-h{
+        position: fixed;
+        background-color: white;
+        width: 100vw;
+        top: 24%;
+        
+    }
+    
+    #menu-h ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content:flex-start; 
+    }
+    
+    
+    #menu-h ul li a{
+        color: rgb(90, 88, 88);
+        padding: 10px;
+        font-size: 13.5px; 
+        margin-left: 15px;
+       
+    }
+
+    .container-grid {
+        display: grid;
+        height: 100vh;
+        grid-auto-flow: column;
+        grid-template-columns:1fr;
+        grid-template-rows:  1fr;
+        grid-template-areas: 
+                             "anel1" 
+                             "anel2" 
+                             "anel3"
+                             "rodape";
+                             
+    }  
+    
+    #imagem1{
+        grid-area: anel1;
+        padding-top: 200%;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    
+    #imagem2{
+        grid-area: anel2;
+        display: flex;
+        justify-content: center;
+        
+       
+    }
+    
+    #imagem3{
+        grid-area: anel3;
+        display: flex;
+        justify-content: center;
+        
+       
+    }
     
 }
 
-/*#foto2{
-    grid-area: foto2;
-    padding-left: 10px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: rgb(90, 88, 88);
-    font-size: 13px;
+@media (min-width: 1280px) {
 
-}
-
-#foto3{
-    grid-area: foto3;
-    padding-right:  30px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: rgb(90, 88, 88);
-    font-size: 13px;
-   
-}*/
-
-
-#rodape{
-    grid-area: rodape;
-    background-color: blanchedalmond;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    text-align: center;
-    color: rgb(90, 88, 88);
-    font-size: 15px;
+    *{
+        margin: 0;  
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family:'Times New Roman', Times, serif; 
+         
+    }
+    
+    h1{
+        position: fixed;
+        width: 100%;
+        height:40px; 
+        background-color:rgb(241, 91, 141);
+        color: white;
+        font-size: 15px;
+        text-align:center;
+        padding-top: 12px;  
+        font-weight: bolder;
+        
+    }
+    
+    #cabecalho{
+        position: fixed;
+        top: 40px;
+        background-color: blanchedalmond;
+        width: 100%;
+        padding: 20px; 
+        text-align: center;     
+    }
+    
+    #cabecalho img{
+        width: 70px;
+        height: 70px;
+    }
+    
+    
+    #menu-h{
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        top: 24%;
+        
+    }
+    
+    #menu-h ul{
+        display: flex;
+        list-style: none;   
+    }
+    
+    #menu-h ul li{
+        padding: 15px;       
+    }
+    
+    #menu-h ul li a{
+        font-size: 18px;
+        color: rgb(90, 88, 88);
+        padding: 20px;
+        margin-left: 80px;
+       
+    }
+    
+    #menu-h a:hover{
+        background-color:  rgb(241, 91, 141);
+        transition: all 0.3s linear;
+    }
+    
+    .dropdown-menu{
+        position: absolute;
+        box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
+        display: none;
+    }
+    
+    .dropdown-menu a{
+        display: block;
+    }
+    
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    
+    .container-grid {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:  1fr 1fr 1fr;
+        grid-template-areas: 
+                             "anel1 anel2 anel3"
+                             "rodape rodape rodape";
+    
+    }
+    
+    #imagem1{
+        grid-area: anel1;
+        padding-top: 250px;
+        padding-left: 10px;  
+        
+    }
+    
+    #imagem2{
+        grid-area: anel2;
+        padding-top: 250px;
+        padding-left: 10px;
+    }
+    
+    #imagem3{
+        grid-area: anel3;
+        padding-top: 250px;
+        padding-left: 10px;
+    }
+    
+    #rodape{
+            grid-area: rodape;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: rgb(90, 88, 88);
+            font-size: 15px;
+            background-color: blanchedalmond;
+            margin-top: 60px;
+            padding: 35px;
+           
+    }
+    
 }

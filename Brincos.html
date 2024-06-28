@@ -19,28 +19,85 @@
         </div>
     </header>    
   
-          <div class="container">  
-            <div id="menu-h">
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aneis.html">Anéis</a></li> 
-                <li><a href="brincos.html">Brincos</a></li> 
-                <li><a href="pulseiras.html">Pulseiras</a></li>
-                <li><a href="colares.html">Colares</a></li>
-                <li><a href="curiosidades.html">Curiosidades</a></li>
-                <li><a href="login.html">Entrar</a><li>
-              </ul>
-            </nav>     
-          </div>
+    /* Menu dropdown */
+    <div id="menu-h">
+      <nav class="menu-h">
+        <ul>
+         <li>
+            <a href="index.html">Home</a>
+         </li>
 
-          <div id="rodape">
-            <footer>
-              <a>
-               Pratas da Mah | A sua loja de acessórios <br> Desenvolvido por Marcele dos Anjos de Souza - 2023
-              </a>
-            </footer>
-         
+         <li class="dropdown">
+            <a href="">Anéis</a>
+              
+           <div class="dropdown-menu">
+            <a href="aneis.html">Anéis</a>
+           </div>  
+         </li>
+        
+         <li class="dropdown">
+            <a href="">Brincos</a>
+
+           <div class="dropdown-menu">
+              <a href="brincos.html">Brincos</a>
+           </div>
+         </li>
+
+         <li class="dropdown">
+            <a href="">Pulseiras</a>
+
+           <div class="dropdown-menu">
+                <a href="pulseiras.html">Pulseiras</a>
+           </div>  
+         </li>
+
+          <li class="dropdown">
+            <a href="">Colares</a>
+
+            <div class="dropdown-menu">
+              <a href="colares.html">Colares</a>
+            </div>  
+          </li>
+
+          <li class="dropdown">
+              <a href="">Curiosidades</a>
+           <div class="dropdown-menu">   
+              <a href="curiosidades.html">Curiosidades</a>
+           </div>
+         </li>
+
+          <li>
+           <a href="login.html">Entrar</a>
+         </li> 
+       </ul>
+     </nav>     
+    </div>   
+       
+    <div class="container-grid">
+      <div id="imagem1">
+        <img src="./src/assets/img/brinco1.jpg" alt="brinco quadrado cravejado" width="400" height="400">
+      </div>
+
+      <div id="imagem2">
+        <img src="./src/assets/img/brinco2.jpg" alt="brinco leque" width="400" height="400">
+      </div>
+
+      <div id="imagem3">
+        <img src="./src/assets/img/brinco3.jpeg" alt="brinco libélula" width="400" height="400">
+      </div>
+      
+      <div id="rodape">
+        <footer>
+          <a>
+           Pratas da Mah | A sua loja de acessórios <br> Desenvolvido por Marcele dos Anjos de Souza | 
+           Curso Descodificadas - 2024
+          </a>
+        </footer>
+      </div>  
+
+    </div>
+
+  
                   
 </body>
 </html>

@@ -1,9 +1,14 @@
+/* Estilos para o corpo da página */
 body{
     margin: 0;  
     padding: 0;
     font-family:'Times New Roman', Times, serif; 
+    box-sizing: border-box;
     
 }
+
+/* Estilo para chamada desconto
+--> centraliza e fixa o conteúdo no topo da página*/
 
 h1{
     position: fixed;
@@ -17,7 +22,7 @@ h1{
     
 }
 
-
+/* Estilos para o cabeçalho da página*/
 #cabecalho{
     position: fixed;
     display: flex;
@@ -31,34 +36,50 @@ h1{
     height: 80px;
 }
 
-.menu-h{
-    background-color: white;
-  
-}
 
-.menu-h li{
-   display:inline-block;
-           
-}
-
-.menu-h li a{
-    display:inline-block;
-    text-decoration: none;
-    color: rgb(90, 88, 88);
-    top:25px;
-    font-weight:lighter;
+/*Estilos para os itens do menu */
+#menu-h{
+   background-color: #fff;
+   overflow: hidden;
    
 }
 
-.menu-h li a:hover{
+#menu-h ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content:flex-start;
+   
+}
+
+#menu-h li a{
+    display:inline-block;
+    color: rgb(90, 88, 88);
+    font-weight:lighter;
+    text-decoration: none;
+  
+}
+
+/*Animação para quando o usuário clicar com o mouse no menu, o mesmo
+mudar de cor*/
+#menu-h li a:hover{
     background-color:  rgb(241, 91, 141);
+
+/* Tempo em que o hover será aplicado*/    
     transition: all 0.5s linear;
 }
 
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-menu{
-    position: absolute;
+    position: relative;
+    display: inline-block;
     box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
     display: none;
+    z-index: 1;
 }
 
 .dropdown-menu a{
@@ -67,6 +88,7 @@ h1{
 
 .dropdown:hover .dropdown-menu{
     display: block;
+    
 }
 
 /*Estilos do container:
@@ -77,7 +99,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: blanchedalmond;   
+    background-color: blanchedalmond;  
 }
 
 /*Estilos do content
@@ -87,8 +109,7 @@ h1{
     height: 370px;
     width: 800px;   
     overflow: hidden; 
-    border-radius: 10px;
-
+    
     /* Posicionamento da imagem*/
     position: absolute;
     top:71%;
@@ -99,7 +120,7 @@ h1{
 
 }
 
-/* Estilização da navegação*/
+/* Navegação dos slides*/
 .navigation{
 
  /* Para mover o elemento filho dentro do elemento pai*/
@@ -115,14 +136,12 @@ h1{
  
 }
 
-
 /* Personalização do label (barras de navegação) */
 .bar{
     width: 70px;
     height: 17px;
     border: 2px solid #fff;
     margin: 6px;
-    border-radius: 5px;
     cursor: pointer;
 
  /* Tempo em que o hover será aplicado*/
@@ -168,9 +187,7 @@ sem correr o risco de dar algum problema */
     
 }
 
-/* Personalização da animação
-Quando o s1 estiver checked, eu quero que  a primeira div da imagem tenha uma margem,
- pois ela já está como imagem padrão */
+/* Controlar os slides */
 #slide1:checked ~ .s1 {
     margin-left: 0;
 }
@@ -202,13 +219,12 @@ Quando o s1 estiver checked, eu quero que  a primeira div da imagem tenha uma ma
 .container-grid{
     display: grid;
     height: 100vh;
-    width: 100%;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:  1fr 1fr 1fr;
     grid-template-areas: "capa capa capa"
                          "card1 card2 card3"
-                         "video promocoes mapa"
+                         "video contato mapa"
                          "rodape rodape rodape";
                          
 }
@@ -220,7 +236,8 @@ Quando o s1 estiver checked, eu quero que  a primeira div da imagem tenha uma ma
    
     
 }
-
+ 
+/* Descrição dos cards*/
 h3{
     font-weight: lighter;
 }
@@ -285,38 +302,46 @@ h4{
 
 #mapa{
     padding-top: 30px;
-    margin-left: 80px;
+    margin-right: 250px;
     padding-bottom: 30px;
     text-align: center; 
     color: rgb(90, 88, 88);
     font-size: 15px;
 }
 
-#promocoes{
-    grid-area: promocoes;
-    
-   
-    
+#contato{
+    grid-area: contato;
+    margin-left: 150px;
+    padding-top: 150px;
+    font-size: 20px;
+
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    color: rgb(241, 91, 141);
+.atendimento{
+    color:  rgb(241, 91, 141);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 35px;
+}
+
+.email{
+    color:rgb(241, 91, 141);
   
- 
- }
+}
 
+.email__email{
+    color:rgb(90, 88, 88) ;
+}
 
- button{
-    background-color: rgb(241, 91, 141);
-    color: #fff;
-    border-radius: 5px;
-    border: 2px solid;
-    padding: 10px;
-    cursor: pointer;
- }
+.whatsapp{
+    color:rgb(241, 91, 141);
+}
+
+.whatsapp__whatsapp{
+    color:rgb(90, 88, 88) ;
+
+}
+
 
 #rodape{
     grid-area: rodape;
@@ -326,160 +351,147 @@ form{
     color: rgb(90, 88, 88);
     font-size: 15px;
     background-color: blanchedalmond;
+    margin-top: 60px;
+    padding: 35px;
    
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+
     h1{
-        position: fixed;
+        font-size: 1.0rem;
+        text-align: center;
         width: 100%;
-        height:40px; 
-        background-color:rgb(241, 91, 141);
-        color: white;
-        font-size: 12px;
-        text-align:center;
-        padding-top: 12px;     
     }
 
     #cabecalho{
-        padding: 10px 0 10px 0;
+        position: fixed;
+        top: 19px;
+        width: 100%;
+        padding: 15px; 
     }
-/*
-    #menu-h{
-        display: none;
-    }
-
-    #menu-h ul li a{
-        display: none;
-    }
-
-  */
-    h2{
-        position:absolute;
-        top: 230px;
-        left: 60px;
-        font-size:20px;
-        color: white;  
-    }
-
-    .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        display:block;
-        grid-template-areas: "capa capa capa"
-                             "card1 card2 card3"
-                             "mapa video promocoes"
-                             "rodape rodape rodape";
- 
-}
-
-   #capa img{
-      grid-area: capa;
-      display: flex;
-      max-width: 100%;
-      height:100%;
-      
     
-}
-    #card1{
-        grid-area: card1;
-        padding-right: 30px;
+    #cabecalho img{
+        width: 70px;
+        height: 70px;
     }
 
-    #card2{
-        grid-area: card2;
-        padding-right: 30px;
-        padding-left: 30px;
-        padding-top: 5px;
-    }
-
-    #card3{
-        grid-area: card3;
-        padding-right: 30px;
-        padding-left: 30px;
-        padding-top: 5px;
-    }
-
-    #mapa{
-        padding-top: 30px;
-        margin-right: 80px;
-
-    }
-
-    #video{
-        grid-area: video;
-        padding-left: 10px;
-        padding-top:  10px;
-       
-    }
-
-     #promocoes{
-        grid-area: promocoes;
-        text-align: center;
-        padding-bottom: 100px;
-
-     }
-
-
-     #rodape{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        text-align: center;
-        color: rgb(90, 88, 88);
-        font-size: 15px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        background-color: blanchedalmond;
-       
+    #menu-h{
+        position: fixed;
+        background-color: white;
+        width: 100vw;
+        top: 17%;
         
     }
-
-     
-}
-
-@media (min-width: 768px) {
-    h1{
-        position: fixed;
-        width: 100%;
-        height:40px; 
-        background-color:rgb(241, 91, 141);
-        color: white;
-        font-size: 15px;  
-        text-align:center;
-        padding-top: 12px;     
-    }
-
-    #menu-h ul li a{
+    
+    #menu-h ul{
         display: flex;
         list-style: none;   
-        background-color: white;
-        color: rgb(90, 88, 88);
-        padding: 5px;
-        font-size: 15px; 
-        margin-left: 30px;
-        font-size: large;
-        text-align: center;
-    }
-
-     #capa img{
-        display: flex;
-        width: 100%;
-        height: 400px;
-        
-    }
-
-    h2{
-        position: relative;
-        top: 250px;
-        padding-right: 100px;
-        text-align:center;
-        font-size:30px;
-        color: white;  
     }
     
+    
+    #menu-h ul li a{
+        color: rgb(90, 88, 88);
+        padding: 10px;
+        font-size: 15px; 
+        margin-left: 35px;
+       
+    }
+
+    .container {
+        padding: 43%;
+        
+      }
+    .content{
+        height: 370px;
+        width: 600px; 
+        position: absolute;
+        top: 60%;
+        left: 50%;  
+    }
+      
+    .container-grid{
+        display: grid;
+        height: 100vh;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "capa"
+                             "card1"
+                             "card2" 
+                             "card3"
+                             "video" 
+                             "contato" 
+                             "mapa"
+                             "rodape";
+    }
+
+    #capa img{
+        grid-area: capa;
+        display: flex;
+        width: 100%;
+        height: 50vh;
+    }
+
+    #card1{
+        grid-area: card1;
+        padding-left: 30px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        background-color: blanchedalmond;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 13px;
+      
+    }
+    
+    #card2{
+        grid-area: card2;
+        padding-left: 10px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    
+    #card3{
+        grid-area: card3;
+        padding-right:  5px;
+        padding-top: 50px;
+        padding-bottom: 30px;  
+       
+    }
+    
+    #video video{
+    grid-area: video;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    }
+
+    #contato{
+        grid-area: contato;
+        margin-left: 280px;
+        padding-top: 50px;
+        font-size: 20px;
+    
+    }
+
+    #mapa iframe {
+        grid-area: mapa;
+        display: flex;
+        padding-left: 28%;
+        width: 400px;
+        height: 400px;   
+    }
+
+    #rodape{
+        grid-area: rodape;
+          
+    }
+        
 
 }
+
+   
 
 @media (min-width: 1280px) {
    
@@ -495,13 +507,6 @@ form{
         
     }
     
-    h2{
-        position: relative;
-        top: 300px;
-        text-align: center;
-        font-size:50px;
-        color: white;  
-    }
     
     
     #cabecalho{
@@ -518,29 +523,18 @@ form{
         height: 70px;
     }
     
-    #capa img{
+    #capa img{ 
         max-width: 100%;
         height: 100%;
     }
-    
-    .container{
-        display: grid;
-        height: 100vh;
-        grid-auto-flow: column;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "capa capa capa"
-                             "card1 card2 card3"
-                             "mapa video promocoes"
-                             "rodape rodape rodape";
-    }
-    
+     
     
     #menu-h{
         position: fixed;
+        overflow: hidden;
         background-color: white;
         width: 100%;
-        top: 24%;
+        top: 22%;
         
     }
     
@@ -566,16 +560,175 @@ form{
         background-color:  rgb(241, 91, 141);
         transition: all 0.3s linear;
     }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-menu{
+        position: relative;
+        display: inline-block;
+        box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
+        display: none;
+        z-index: 1;
+    }
+    
+    .dropdown-menu a{
+        display: block;
+    }
+    
+    .dropdown:hover .dropdown-menu{
+        display: block;
+        
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: blanchedalmond; 
+        height: 100%; 
+    }
+    
+    /*Estilos do content
+    --> definição da altura e largura da imagem
+    --> hoverflow hidden p/ esconder as imagens que estavam ultrapassando o content*/
+    .content{
+        height: 370px;
+        width: 800px;   
+        overflow: hidden; 
+        
+        /* Posicionamento da imagem*/
+        position: absolute;
+        top:71%;
+        left: 50%;
+    
+        /* Move a imagem em seu próprio eixo*/
+        transform: translate(-50%, -50%);   
+    
+    }
+    
+    /* Navegação dos slides*/
+    .navigation{
+    
+     /* Para mover o elemento filho dentro do elemento pai*/
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+    
+     /* Para corrigir a imagem na horizontal (eixo x)*/   
+        transform: translate(-50%);
+    
+     /* Para deixar o elemento um ao lado do outro*/   
+        display: flex;
+     
+    }
+    
+    /* Personalização do label (barras de navegação) */
+    .bar{
+        width: 70px;
+        height: 17px;
+        border: 2px solid #fff;
+        margin: 6px;
+        cursor: pointer;
+    
+     /* Tempo em que o hover será aplicado*/
+        transition: .4s
+        
+    }
+    
+    /* Para deixar a barra branca ao colocar o mouse emcima do bar*/
+    .bar:hover{
+        background-color: #fff;
+        
+    }
+    
+    input{
+        display: none;
+    }
+    
+    /*Personalização das imagens p/ deixar uma ao lado da outra na animação*/
+    .slides{
+        display: flex; 
+    
+    /* Para uma imagem aparecer de cada vez e a largura ficar 100% 
+    sem correr o risco de dar algum problema */
+       width: 500%;
+       height: 100%;
+       animation: slides 20s infinite;
+      
+    }
+    
+    /* Pernonalização da div de cada imagem, onde está armazenada as imagens 
+    --> para que todas as imagens tenham o mesmo tamanho dividi 5 imagens / 100 que é a div pai
+    --> transição para um efeito */
+    .slide{
+       width: 20%;     
+       transition: .6s;
+    
+    }
+    
+    /* Personalização das imagens que estão dentro do slide, para que todas apareçam por inteira */
+    .slide img{
+        width: 100%;
+        height: 100%; 
+        
+    }
+    
+    /* Controlar os slides */
+    #slide1:checked ~ .s1 {
+        margin-left: 0;
+    }
+    
+    /* A segunda imagem estará -20% da primeira imagem*/
+    #slide2:checked ~ .s1{
+        margin-left: -20%;
+    
+    }
+    
+    /* A terceira imagem estará -40% da segunda imagem*/
+    #slide3:checked ~ .s1{
+        margin-left: -40%
+        
+    }
+    
+    /* A quarta imagem estará -60% da terceira imagem*/
+    #slide4:checked ~ .s1{
+        margin-left: -60%;
+    
+    }
+    
+    /* A quinta imagem estará -80% da quarta imagem*/
+    #slide5:checked ~ .s1{
+        margin-left: -80%;
+    }
+    
+
+    .container-grid{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "capa capa capa"
+                             "card1 card2 card3"
+                             "video contato mapa"
+                             "rodape rodape rodape";
+    }
     
     #capa{
         grid-area: capa;
+        height: 400px;
         
     }
     
     #card1{
         grid-area: card1;
-        padding-left: 30px;
-        padding-top: 50px;
+        
         padding-bottom: 30px;
         background-color: blanchedalmond;
         text-align: center;
@@ -585,8 +738,7 @@ form{
     
     #card2{
         grid-area: card2;
-        padding-left: 10px;
-        padding-top: 50px;
+        padding-left: 90px;
         padding-bottom: 30px;
         background-color: blanchedalmond;
         text-align: center;
@@ -597,14 +749,23 @@ form{
     
     #card3{
         grid-area: card3;
-        padding-right:  40px;
-        padding-top: 50px;
+        
         padding-bottom: 30px;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
         font-size: 13px;
        
+    }
+
+    #video{
+        grid-area: video;
+        padding-left: 30px;
+        padding-top:  30px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
     }
     
     #mapa iframe{
@@ -622,32 +783,48 @@ form{
         font-size: 15px;
     }
     
-    #video{
-        grid-area: video;
-        padding-left: 30px;
-        padding-top:  30px;
-        padding-bottom: 20px;
-        text-align: center;
-        color: rgb(90, 88, 88);
-        font-size: 15px;
+    #contato{
+        grid-area: contato;
+        margin-left: 150px;
+        padding-top: 150px;
+        font-size: 20px;
+    
     }
     
-    #promocoes{
-        grid-area: promocoes;
-        font-size: 25px;
-        margin-top: 130px;
-        margin-left: 15px;
-        color: rgb(241, 91, 141);
+    .atendimento{
+        color:  rgb(241, 91, 141);
+        font-size: 20px;
+        font-weight: bolder;
+        margin-left: 35px;
+    }
+    
+    .email{
+        color:rgb(241, 91, 141);
+      
+    }
+    
+    .email__email{
+        color:rgb(90, 88, 88) ;
+    }
+    
+    .whatsapp{
+        color:rgb(241, 91, 141);
+    }
+    
+    .whatsapp__whatsapp{
+        color:rgb(90, 88, 88) ;
+    
     }
     
     #rodape{
         grid-area: rodape;
-        background-color: blanchedalmond;
-        padding-bottom: 50px;
-        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         color: rgb(90, 88, 88);
         font-size: 15px;
+        background-color: blanchedalmond;
+       
     }
     
 

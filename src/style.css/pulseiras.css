@@ -86,33 +86,29 @@ h1{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:  1fr 1fr 1fr;
     grid-template-areas: 
-                        "brinco1 brinco2 brinco3"
+                        "pulseira1 pulseira2 pulseira3"
                          "rodape rodape rodape";
 
-                                                                 
-     
 }
 
+
 #imagem1{
-    grid-area: brinco1;
+    grid-area: pulseira1;
     padding-top: 250px;
-    padding-left: 40px; 
-   
+    padding-left: 40px;  
     
 }
 
 #imagem2{
-    grid-area: brinco2;
+    grid-area: pulseira2;
     padding-top: 250px;
     padding-left: 50px;
-   
 }
 
 #imagem3{
-    grid-area: brinco3;
+    grid-area: pulseira3;
     padding-top: 250px;
     padding-left: 50px;
-  
 }
 
 #rodape{

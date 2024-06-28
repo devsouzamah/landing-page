@@ -1,0 +1,125 @@
+*{
+    margin: 0;  
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif; 
+     
+}
+
+h1{
+    position: fixed;
+    width: 100%;
+    height:40px; 
+    background-color:rgb(241, 91, 141);
+    color: white;
+    font-size: 15px;
+    text-align:center;
+    padding-top: 12px;  
+    font-weight: bolder;
+    
+}
+
+#cabecalho{
+    position: fixed;
+    top: 40px;
+    background-color: blanchedalmond;
+    width: 100%;
+    padding: 20px; 
+    text-align: center;     
+}
+
+#cabecalho img{
+    width: 70px;
+    height: 70px;
+}
+
+
+#menu-h{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 24%;
+    
+}
+
+#menu-h ul{
+    display: flex;
+    list-style: none;   
+}
+
+#menu-h ul li{
+    padding: 15px;       
+}
+
+#menu-h ul li a{
+    color: rgb(90, 88, 88);
+    padding: 20px;
+    margin-left: 80px;
+   
+}
+
+#menu-h a:hover{
+    background-color:  rgb(241, 91, 141);
+    transition: all 0.3s linear;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 solid 2px  rgb(241, 91, 141);
+    display: none;
+}
+
+.dropdown-menu a{
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.container-grid{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-areas: 
+                        "colar1 colar2 colar3"
+                         "rodape rodape rodape";
+
+}
+
+
+#imagem1{
+    grid-area: colar1;
+    padding-top: 250px;
+    padding-left: 40px;  
+    
+}
+
+#imagem2{
+    grid-area: colar2;
+    padding-top: 250px;
+    padding-left: 50px;
+}
+
+#imagem3{
+    grid-area: colar3;
+    padding-top: 250px;
+    padding-left: 50px;
+}
+
+#rodape{
+        grid-area: rodape;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: rgb(90, 88, 88);
+        font-size: 15px;
+        background-color: blanchedalmond;
+        margin-top: 60px;
+        padding: 35px;
+       
+}
