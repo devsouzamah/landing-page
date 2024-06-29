@@ -24,7 +24,7 @@ h1{
     top: 40px;
     background-color: blanchedalmond;
     width: 100%;
-    padding: 20px; 
+    padding: 10px; 
     text-align: center;     
 }
 
@@ -34,7 +34,7 @@ h1{
 }
 
 
-.menu-h{
+#menu-h{
     position: fixed;
     background-color: white;
     width: 100%;
@@ -42,16 +42,16 @@ h1{
     
 }
 
-.menu-h ul{
+#menu-h ul{
     display: flex;
     list-style: none;   
 }
 
-.menu-h ul li{
+#menu-h ul li{
     padding: 15px;       
 }
 
-.menu-h ul li a{
+#menu-h ul li a{
     color: rgb(90, 88, 88);
     padding: 20px;
     font-size: 20px;
@@ -60,7 +60,7 @@ h1{
    
 }
 
-.menu-h a:hover{
+#menu-h a:hover{
     background-color:  rgb(241, 91, 141);
     transition: all 0.3s linear;
 }

@@ -5,15 +5,11 @@
     padding: 0;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
+
 
 #cabecalho{
     display: flex;
-    padding: 25px;
+    padding: 15px;
     justify-content: center;
     background-color: blanchedalmond;  
    
@@ -64,12 +60,12 @@ button{
 
 #rodape{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
     color: rgb(90, 88, 88);
     font-size: 15px;
     background-color: blanchedalmond;
-    padding: 55px;
+    margin-top: 150px;
+    padding: 36px
    
 }

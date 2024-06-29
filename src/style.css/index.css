@@ -4,6 +4,7 @@ body{
     padding: 0;
     font-family:'Times New Roman', Times, serif; 
     box-sizing: border-box;
+    width: 100vw;
     
 }
 
@@ -243,9 +244,7 @@ h3{
 }
 
 #card1{
-    grid-area: card1;
-    padding-left: 30px;
-    padding-top: 50px;
+    grid-area: card1; 
     padding-bottom: 30px;
     background-color: blanchedalmond;
     text-align: center;
@@ -256,8 +255,6 @@ h3{
 
 #card2{
     grid-area: card2;
-    padding-left: 10px;
-    padding-top: 50px;
     padding-bottom: 30px;
     background-color: blanchedalmond;
     text-align: center;
@@ -268,8 +265,6 @@ h3{
 
 #card3{
     grid-area: card3;
-    padding-right:  30px;
-    padding-top: 50px;
     padding-bottom: 30px;
     background-color: blanchedalmond;
     text-align: center;
@@ -302,7 +297,10 @@ h4{
 
 #mapa{
     padding-top: 30px;
-    margin-right: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 100px;
     padding-bottom: 30px;
     text-align: center; 
     color: rgb(90, 88, 88);
@@ -341,7 +339,6 @@ h4{
     color:rgb(90, 88, 88) ;
 
 }
-
 
 #rodape{
     grid-area: rodape;
@@ -414,6 +411,8 @@ h4{
         display: grid;
         height: 100vh;
         grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "capa"
@@ -460,11 +459,9 @@ h4{
        
     }
     
-    #video video{
+    #video{
     grid-area: video;
-    width: 70%;
-    height: auto;
-    align-items: center;
+    width: 90%;
     }
 
     #contato{
@@ -477,10 +474,9 @@ h4{
 
     #mapa iframe {
         grid-area: mapa;
-        display: flex;
         padding-left: 28%;
-        width: 400px;
-        height: 400px;   
+        width: 300px;
+        height: 300px;   
     }
 
     #rodape{
@@ -534,8 +530,7 @@ h4{
         overflow: hidden;
         background-color: white;
         width: 100%;
-        top: 22%;
-        
+        top: 22%;  
     }
     
     #menu-h ul{
@@ -652,7 +647,7 @@ h4{
     
     /*Personalização das imagens p/ deixar uma ao lado da outra na animação*/
     .slides{
-        display: flex; 
+       display: flex; 
     
     /* Para uma imagem aparecer de cada vez e a largura ficar 100% 
     sem correr o risco de dar algum problema */
@@ -710,36 +705,33 @@ h4{
     .container-grid{
         display: grid;
         height: 100vh;
-        width: 100vw;
         grid-auto-flow: column;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "capa capa capa"
                              "card1 card2 card3"
-                             "video contato mapa"
+                             "video mapa contato"
                              "rodape rodape rodape";
     }
     
     #capa{
         grid-area: capa;
+        width: 100vw;
         height: 400px;
         
     }
     
-    #card1{
+    #card1 img{
         grid-area: card1;
-        
-        padding-bottom: 30px;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
         font-size: 13px;   
     }
     
-    #card2{
+    #card2 img{
         grid-area: card2;
-        padding-left: 90px;
-        padding-bottom: 30px;
+        padding-left: 10px;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
@@ -749,8 +741,6 @@ h4{
     
     #card3{
         grid-area: card3;
-        
-        padding-bottom: 30px;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
@@ -786,7 +776,7 @@ h4{
     #contato{
         grid-area: contato;
         margin-left: 150px;
-        padding-top: 150px;
+        padding-top: 10px;
         font-size: 20px;
     
     }
