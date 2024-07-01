@@ -4,7 +4,6 @@ body{
     padding: 0;
     font-family:'Times New Roman', Times, serif; 
     box-sizing: border-box;
-
 }
 
 /* Estilo para chamada desconto
@@ -91,15 +90,22 @@ mudar de cor*/
     
 }
 
+.capa img{
+   width:100vw;
+   height: 100vh;
+}
+
 /*Estilos do container:
 --> centraliza o conteudo na página*/
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: auto;
-    background-color: blanchedalmond;  
+    align-items: center;
+    background-color: blanchedalmond;
+   
+
 }
 
 /*Estilos do content
@@ -222,20 +228,13 @@ sem correr o risco de dar algum problema */
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:  1fr 1fr 1fr;
-    grid-template-areas: "capa capa capa"
-                         "card1 card2 card3"
+    grid-template-areas:"card1 card2 card3"
                          "video contato mapa"
                          "rodape rodape rodape";
                          
+                         
 }
 
-
-#capa img{
-    grid-area: capa;
-    height: 100vh;
-   
-    
-}
  
 /* Descrição dos cards*/
 h3{
@@ -292,6 +291,7 @@ h4{
     grid-area: mapa;
     width: 300px;
     height: 300px;
+    padding-right: 100px;
 }
 
 #mapa{
@@ -311,6 +311,7 @@ h4{
     margin-left: 150px;
     padding-top: 150px;
     font-size: 20px;
+    padding-left: 20px;
 
 }
 
@@ -394,15 +395,28 @@ h4{
        
     }
 
+    .capa img{
+       
+        width: 100vw;
+        height: 100vh;
+    }
+
     .container {
-        padding: 43%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: blanchedalmond;
+        padding-bottom: 900px;
+       
         
-      }
+    }
     .content{
         height: 370px;
         width: 600px; 
         position: absolute;
-        top: 60%;
+        top: 150%;
         left: 50%;  
     }
       
@@ -414,22 +428,16 @@ h4{
         align-items: center;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "capa"
-                             "card1"
-                             "card2" 
-                             "card3"
-                             "video" 
-                             "contato" 
-                             "mapa"
-                             "rodape";
+        grid-template-areas:  "card1"
+                              "card2" 
+                              "card3"
+                              "video" 
+                              "contato" 
+                              "mapa"
+                              "rodape";
+                            
     }
 
-    #capa img{
-        grid-area: capa;
-        display: flex;
-        width: 100%;
-        height: 50vh;
-    }
 
     #card1{
         grid-area: card1;
@@ -515,11 +523,6 @@ h4{
         height: 70px;
     }
     
-    #capa img{ 
-        height: 100%;
-    }
-     
-    
     #menu-h{
         position: fixed;
         overflow: hidden;
@@ -573,6 +576,11 @@ h4{
         
     }
 
+    .capa img{
+        width:100vw;
+        height: 180vh;
+    }
+
     .container{
         display: flex;
         flex-direction: column;
@@ -580,7 +588,8 @@ h4{
         align-items: center;
         margin: auto;
         background-color: blanchedalmond; 
-        height: 100%; 
+        
+     
     }
     
     /*Estilos do content
@@ -593,7 +602,7 @@ h4{
         
         /* Posicionamento da imagem*/
         position: absolute;
-        top:71%;
+        top:220%;
         left: 50%;
     
         /* Move a imagem em seu próprio eixo*/
@@ -703,25 +712,19 @@ h4{
         grid-auto-flow: column;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "capa capa capa"
-                             "card1 card2 card3"
-                             "video mapa contato"
+        grid-template-areas: "card1 card2 card3"
+                             "video contato mapa"
                              "rodape rodape rodape";
     }
     
-    #capa{
-        grid-area: capa;
-        width: 100vw;
-        height: 400px;
-        
-    }
+  
     
     #card1 img{
         grid-area: card1;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
-        font-size: 13px;   
+        font-size: 13px; 
     }
     
     #card2 img{
