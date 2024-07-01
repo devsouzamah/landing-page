@@ -4,7 +4,7 @@ body{
     padding: 0;
     font-family:'Times New Roman', Times, serif; 
     box-sizing: border-box;
-    
+
 }
 
 /* Estilo para chamada desconto
@@ -488,11 +488,10 @@ h4{
 
    
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
    
     h1{
         position: fixed;
-        width: 100%;
         height:40px; 
         background-color:rgb(241, 91, 141);
         color: white;
@@ -501,8 +500,6 @@ h4{
         padding-top: 12px;  
         
     }
-    
-    
     
     #cabecalho{
         position: fixed;
@@ -519,7 +516,6 @@ h4{
     }
     
     #capa img{ 
-        max-width: 100%;
         height: 100%;
     }
      
