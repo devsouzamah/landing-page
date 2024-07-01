@@ -253,6 +253,7 @@ h3{
 
 #card2{
     grid-area: card2;
+    padding-left: 20px;
     padding-bottom: 30px;
     background-color: blanchedalmond;
     text-align: center;
@@ -729,7 +730,7 @@ h4{
     
     #card2 img{
         grid-area: card2;
-        padding-left: 10px;
+        padding-left: 80px;
         background-color: blanchedalmond;
         text-align: center;
         color: rgb(90, 88, 88);
