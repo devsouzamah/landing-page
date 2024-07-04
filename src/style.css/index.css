@@ -377,8 +377,10 @@ h4{
     #menu-h{
         position: fixed;
         background-color: white;
-        width: 100vw;
-        top: 16%;
+        width: 102vw;
+        top: 104px;
+        display: flex;
+        justify-content: space-around;
         
     }
     
@@ -397,9 +399,9 @@ h4{
     }
 
     .capa img{
-       
-        width: 100vw;
-        height: 50vh;
+        display: flex;
+        width: 102vw;
+        height: 55vh;
     }
 
     .container {
@@ -410,6 +412,7 @@ h4{
         margin: auto;
         background-color: blanchedalmond;
         padding-bottom: 500px;
+        width: 102vw;
        
         
     }
@@ -417,7 +420,7 @@ h4{
         height: 270px;
         width: 450px; 
         position: absolute;
-        top: 85%;
+        top: 90%;
         left: 50%;  
     }
 
@@ -489,6 +492,7 @@ h4{
 
     #rodape{
         grid-area: rodape;
+        font-size: 12px;
           
     }
 
